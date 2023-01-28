@@ -10,7 +10,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.6</version>
+		<version>3.0.1</version>
 	</parent>
 
 	<dependencies>
@@ -24,6 +24,12 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<!-- end::actuator[] -->
+		<dependency>
+			<groupId>io.openliberty</groupId>
+			<artifactId>openliberty-runtime</artifactId>
+			<version>22.0.0.12</version>
+			<type>zip</type>
+		</dependency>
 		<!-- tag::tests[] -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
