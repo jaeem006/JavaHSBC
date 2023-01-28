@@ -34,6 +34,8 @@ public class WebSecurityConfig {
         return http
                 .csrf().disable()
                 .authorizeRequests()
+                .requestMatchers("/h2/**")
+                .anonymous()
                 .anyRequest()
                 .authenticated()
                 .and()
@@ -70,6 +72,10 @@ public class WebSecurityConfig {
     @Bean
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
+    }
+
+    public static void main(String[] args) {
+        System.out.println("pass: " + new BCryptPasswordEncoder().encode("javi"));
     }
 }
 

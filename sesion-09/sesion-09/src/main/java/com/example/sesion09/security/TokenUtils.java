@@ -13,7 +13,8 @@ import java.util.Map;
 
 public class TokenUtils {
 
-    private final static String ACCESS_TOKEN_SECRET = "supersecret";
+    //La longitud mínima del Token es de 256 bytes
+    private final static String ACCESS_TOKEN_SECRET = "supersecrethsbgobgw0ogbweñgobiweogbpiwñgowegbweogbwe";
     private final static Long ACCES_TOKEN_VALIDITY_SECONDS = 2_592_000L;
 
     public static String createToken(String nombre, String email, String rol){
